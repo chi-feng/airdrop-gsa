@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<head>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<script src="simulation.js"></script>
+<script src="main.js"></script>
+
+<style>
+html { box-sizing: border-box; padding: 0; margin: 0; }
+*, *:before, *:after { box-sizing: inherit; padding: 0; margin: 0; font-size: 13px; }
+body { font-family: Helvetica, Arial, sans-serif; line-height: 1.4; }
+form { display: inline-block; vertical-align: top; width: 240px; padding: 15px; padding-right: 0; }
+fieldset { border: 0; padding: 0.25em; margin-top: 0.25em; }
+fieldset legend { display: block; font-weight: bold; }
+label { display: inline-block; width: 5em; text-align: right; margin-right: 0.5em; }
+.param label:nth-child(3) { width: 1em; text-align: center;}
+input { width: 4em; text-align: center; border: 1px solid transparent; background:#fcf6e0; /*border-bottom: 1px solid #aaa;*/ padding: 0.1em; margin: 0.06em 0.5em 0.06em 0; }
+input.readonly { color: #aaa; background:#fff; border-bottom: 1px solid transparent; }
+button { background: #36a; color:#fff; padding: 10px; display: block; border: 0; width: 100%; cursor:pointer; box-shadow: 0px 3px 15px -3px #000; border-radius: 3px; }
+button:hover { background: #49c; }
+#col-traj { display: inline-block; vertical-align: top; }
+#col-hist{ display: inline-block; vertical-align: top; }
+#summary {display: inline-block; vertical-align: top; padding: 20px; }
+.plt-container { display: inline-block; vertical-align: top; }
+#plt-traj-container { width: 300px; height: 300px;}
+#plt-xsense-container { width: 500px; height: 300px;  }
+#plt-vsense-container { width: 300px; height: 300px;  }
+#plt-xtotal-container { width: 300px; height: 300px;  }
+#plt-vtotal-container { width: 300px; height: 300px;  }
+#plt-sense-container { margin-left: 240px; }
+</style>
+</head>
+<body onload="init()">
+
+<form id="parameters"></form>
+<div id="col-traj">
+<div id="plt-traj-container" class="plt-container"><div id="plt-traj"></div></div>
+<div id="plt-xsense-container" class="plt-container"><div id="plt-xsense"></div></div>
+</div>
+<div id="col-hist">
+<div id="plt-x-container" class="plt-container"><div id="plt-x"></div></div>
+<div id="summary"></div><br style="clear:both">
+<div id="plt-xtotal-container" class="plt-container"><div id="plt-xtotal"></div></div>
+</div><!--<div id="plt-sense-container">
+<div id="plt-vsense-container" class="plt-container"><div id="plt-vsense"></div></div>
+<div id="plt-vtotal-container" class="plt-container"><div id="plt-vtotal"></div></div>
+</div>-->
+</body>
+</html>
